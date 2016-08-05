@@ -6,7 +6,9 @@
     "cascadiafest": "./index.js"
   },
   "dependencies": {
-    "request-promise": "^0.4.2"
+    "async": "^2.0.1",
+    "request-promise": "^0.4.2",
+    "say": "^0.9.0"
   },
   "devDependencies": {},
   "scripts": {

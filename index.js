@@ -3,6 +3,17 @@
 var request = require('request-promise');
 var track = 1;
 var sorryMsg = 'Sorry, nothing to stream for now...';
+var async = require('async');
+
+var say = require('say');
+
+var tts = process.argv[2] === '-s' || process.argv[2] === '--say';
+
+var q = async.queue(function(task, callback) {
+  process.stdout.write(task.result);
+  if (tts) say.speak(task.result, 'Alex', 1, callback);
+  else callback();
+});
 
 console.log("✨ Streaming Cascadiafest 2016✨ ");
 
@@ -14,9 +25,12 @@ var last = null;
       v = JSON.parse(v);
       last = v.lastPosition;
       if (v.i && v.i.length) {
-        process.stdout.write(v.i.map(function(v) {
+        var result = v.i.map(function(v) {
           return decodeURIComponent(v.d);
-        }).join(''));
+        }).join('');
+        q.push({
+          result: result
+        });
       }
   })
   .catch(function(err){
