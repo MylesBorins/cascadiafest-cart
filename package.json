@@ -1,12 +1,13 @@
 {
-  "name": "cascadiafest-cart",
-  "version": "1.1.0",
+  "name": "jsconfhi-cart",
+  "version": "1.0.0",
   "main": "index.js",
   "bin": {
-    "cascadiafest": "./index.js"
+    "jsconfhi": "./index.js"
   },
   "dependencies": {
     "async": "^2.0.1",
+    "puppeteer": "^1.12.2",
     "request-promise": "^0.4.2",
     "say": "^0.9.0"
   },
@@ -16,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thealphanerd/cascadiafest-cart.git"
+    "url": "https://github.com/mylesborins/jsconfhi-cart.git"
   },
   "author": "Sam Saccone",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thealphanerd/cascadiafest-cart/issues"
+    "url": "https://github.com/mylesborins/jsconfhi-cart/issues"
   },
-  "homepage": "http://2016.cascadiafest.com"
+  "homepage": "http://jsconfhi.com"
 }

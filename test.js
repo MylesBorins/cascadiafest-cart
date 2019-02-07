@@ -1,9 +1,5 @@
-#!/usr/bin/env node
-
 const puppeteer = require('puppeteer');
-
-console.log("✨ Streaming JSConfHI 2019 ✨ ");
-
+ 
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
