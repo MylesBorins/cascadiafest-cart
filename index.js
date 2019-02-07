@@ -18,7 +18,7 @@ console.log("✨ Streaming JSConfHI 2019 ✨ ");
         update = newText.slice(prevText.length);
       }
       else {
-        update = newText;
+        update = `\n${newText}`;
       }
       prevText = newText;
       process.stdout.write(update);
